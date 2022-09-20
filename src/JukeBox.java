@@ -78,15 +78,7 @@ public class JukeBox {
                         e.printStackTrace();
                         System.exit(0);
                     }
-                    //System.out.println("Playlist Created SuccessFully ");
-                  /*  System.out.println(" ");
-                    System.out.format("%-20s %-20s %-20s %-30s %-20s\n", "SongId", "Album Name", "Duration", "Song Name", "Artist Name", "Genre");
-                    System.out.println("------------------------------------------------------------------------------------------------------------------------");
-                    for (SongCollection songCollection : songList) {
-                        System.out.format("%-20s %-20s %-20s %-30s %-20s\n", songCollection.getSongId(), songCollection.getAlbum(), songCollection.getDuration(),
-                                songCollection.getSongName(), songCollection.getArtist(), songCollection.getGenre());
-                    }*/
-                    //playSong = scanner.nextInt();
+
                     break;
 
                 case 4:

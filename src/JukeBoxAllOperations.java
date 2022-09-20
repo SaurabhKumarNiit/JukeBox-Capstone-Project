@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class JukeBoxAllOperations {
     Scanner scanner = new Scanner(System.in);
 
-    public List<SongCollection> getAllSongs() {
+    public List<SongCollection> getAllSongs()  {
         List<SongCollection> songCollections = new ArrayList<>();
-        try {
+       try {
             Connection connection = DbConnection.getConnection();
 
             Statement statement = connection.createStatement();
@@ -29,7 +29,7 @@ public class JukeBoxAllOperations {
                 String SongPath = resultSet.getString(7);
                 songCollections.add(new SongCollection(SongId, Album, Duration, SongName, Artist, Genre, SongPath));
             }
-        } catch (SQLException e) {
+       } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -46,9 +46,9 @@ public class JukeBoxAllOperations {
         int row = 0;
         Statement st = connection.createStatement();
         System.out.println("Enter Your  PlayList Name :");
-        String Playlistname = scanner.next();
+        String PlayListName = scanner.next();
 
-        row = st.executeUpdate("insert into playlist values(0,'" + Playlistname + "')");
+        row = st.executeUpdate("insert into playlist values(0,'" + PlayListName + "')");
         //flag=st.execute(sql);
 
         if (row == 1) {
@@ -56,7 +56,7 @@ public class JukeBoxAllOperations {
         } else {
             System.out.println("Retry again");
         }
-        String sql2="select playlistId from playlist where playlistName='"+Playlistname+"';";
+        String sql2="select playlistId from playlist where playlistName='"+PlayListName+"';";
         resultSet=st.executeQuery(sql2);
         int playListId=0;
         while (resultSet.next()){
@@ -206,9 +206,9 @@ public class JukeBoxAllOperations {
         System.out.println("Enter Artist Name");
         String ArtistName = scanner.nextLine();
 
+
         System.out.println("Enter Genre of Song");
         String Genre = scanner.nextLine();
-
         System.out.println("Enter the path Of Song");
         String SongPath = scanner.nextLine();
 

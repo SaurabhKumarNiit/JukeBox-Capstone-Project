@@ -8,7 +8,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class JukeBoxAllOperationsTest {
-
     JukeBoxAllOperations jukeBoxAllOperations = null;
 
     @Before
@@ -23,7 +22,7 @@ public class JukeBoxAllOperationsTest {
     @Test
     public void CheckHowManySongsPresentInList() {
 
-        assertEquals(10, jukeBoxAllOperations.getAllSongs().size(), 0);
+        assertEquals(11, jukeBoxAllOperations.getAllSongs().size(), 0);
 
     }
 
